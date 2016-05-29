@@ -114,9 +114,11 @@ add_action( 'widgets_init', 'believeinc_widgets_init' );
  * Enqueue scripts and styles.
  */
 function believeinc_scripts() {
-	wp_enqueue_style( 'believeinc-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'boostrap-style', get_stylesheet_uri() . '/css/bootstrap.min.css', array(), '3.3.6', 'all' );
 
-	wp_enqueue_script( 'believeinc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_style( 'believeinc-bootstrap-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/boostrap.min.js', array('jquery'), '3.3.6', true );
 
 	wp_enqueue_script( 'believeinc-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
