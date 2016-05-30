@@ -111,6 +111,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .hentry {
 	margin: 0 0 1.5em;
+	
 }
 
 .byline,
@@ -182,7 +183,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
-object {
+object,
+img {
 	max-width: 100%;
 }
 

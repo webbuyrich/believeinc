@@ -27,3 +27,12 @@ function believeinc_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'believeinc_body_classes' );
+
+/**
+ * Adds custom read more button
+ *
+ */
+function modify_read_more_link() {
+    return '<p><a class="more-link btn btn-default" href="' . get_permalink() . '">Read More</a></p>';
+}
+add_filter( 'the_content_more_link', 'modify_read_more_link' );
