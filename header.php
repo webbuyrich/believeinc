@@ -25,26 +25,41 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'believeinc' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+		<nav role="navigation">
+				<div class="navbar navbar-static-top navbar-default">
+					<div class="container">
+						<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+							<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ) ?>" rel="homepage"><?php bloginfo( 'name' ) ?></a>
+						</div>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'believeinc' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+						<div class="navbar-collapse collapse navbar-responsive-collapse">
+							<?php
+
+							$args = array(
+								'theme_location' => 'primary',
+								'depth'      => 2,
+								'container'  => false,
+								'menu_class'     => 'nav navbar-nav navbar-right',
+								'walker'     => new Bootstrap_Walker_Nav_Menu()
+								);
+
+							if (has_nav_menu('primary')) {
+								wp_nav_menu($args);
+							}
+
+							?>
+
+						</div>
+					</div>
+				</div>           
+			</nav>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
