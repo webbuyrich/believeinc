@@ -12,17 +12,36 @@
 ?>
 
 	</div><!-- #content -->
-
+	<div class="row" id="black-bar">&nbsp;</div>
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		
 		<div class="container">
+
 			<div class="row">
-				<div class="site-info">
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'believeinc' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'believeinc' ), 'WordPress' ); ?></a>
-					<span class="sep"> | </span>
-					<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'believeinc' ), 'believeinc', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-				</div><!-- .site-info -->
+				<div class="col-md-12 col-lg-12 text-center">
+					<?php if (has_nav_menu('footer-menu', 'believeinc')) { ?>
+					<nav role="navigation">
+						<?php wp_nav_menu(array(
+							'container'       => '',
+							'menu_class'      => 'footer-menu',
+							'theme_location'  => 'footer-menu')
+						); 
+						?>
+					</nav>
+					<?php } ?>
+				</div>
+			</div>
+			<div class='row'>
+				
+				<div class="col-md-6 col-lg-6 text-center">
+					&copy; <?php _e('Copyright', 'believeinc'); ?> <?php echo date('Y'); ?> - <a href="<?php echo home_url(); ?>/" title="<?php bloginfo('name'); ?>" rel="home"><?php bloginfo('name'); ?></a>
+				</div>
+				<div class="col-md-6 col-lg-6 text-center">
+					Created by <a href="http://www.focusedandcreative.com">FocusedAndCreative.com</a>
+				</div>						
+				
 			</div><!-- .row -->
-		</div><!-- .container -->
+		</div><!-- .containr -->
 		
 	</footer><!-- #colophon -->
 </div><!-- #page -->

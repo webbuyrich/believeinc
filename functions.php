@@ -47,6 +47,10 @@ function believeinc_setup() {
 		'primary' => esc_html__( 'Primary', 'believeinc' ),
 	) );
 
+	register_nav_menus( array(
+		'footer-menu' => esc_html__( 'Footer Menu', 'believeinc' ),
+	) );
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
