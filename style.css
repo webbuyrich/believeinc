@@ -96,6 +96,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	max-width: 100%;
 }
 
+.widget ul{
+	list-style: none;
+	padding-left: 10px;
+}
+
 
 /*--------------------------------------------------------------
 ## Posts and pages
