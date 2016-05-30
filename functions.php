@@ -116,6 +116,8 @@ add_action( 'widgets_init', 'believeinc_widgets_init' );
 function believeinc_scripts() {
 	wp_enqueue_style( 'boostrap-style', get_stylesheet_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.6', 'all' );
 
+	wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/css/fontawesome.min.css', array(), '4.6.3', 'all' );
+
 	wp_enqueue_style( 'believeinc-bootstrap-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'respond-js', get_template_directory_uri() . '/js/respond.min.js', array(), '1.4.2', true );
