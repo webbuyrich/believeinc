@@ -160,5 +160,5 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Load Bootstrap Walker for Navigation Menus.
  */
-require get_template_directory() . '/inc/bootstrap-walker.php';
+require get_template_directory() . '/inc/bootstrap-walker.php'; 
 
