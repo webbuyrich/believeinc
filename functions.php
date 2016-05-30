@@ -111,6 +111,16 @@ function believeinc_widgets_init() {
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar Left', 'believeinc' ),
+		'id'            => 'sidebar-left',
+		'description'   => esc_html__( 'Add widgets here.', 'believeinc' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) );
 }
 add_action( 'widgets_init', 'believeinc_widgets_init' );
 
