@@ -268,7 +268,7 @@ object {
 }
 .site-footer{	
 	padding: 30px 0;
-	background-color: #3498db;
+	background-color: #3BAFD6;
 	color: #fff;
 }
 
@@ -294,4 +294,24 @@ object {
 .footer-menu > li:first-child > a, .footer-menu > li:first-child > a{
 	border: none;
 	padding: 0 8px 0 0;
+}
+
+/*--------------------------------------------------------------
+# Post Meta
+--------------------------------------------------------------*/
+.entry-meta .posted-on{
+	margin-right: 20px;
+}
+
+.posted-on .fa, .byline .fa{
+	color: #3BAFD6;
+}
+
+.posted-on a, .byline a{
+	color: #777;
+	
+}
+
+.posted-on a:hover, .byline a:hover{
+	text-decoration: underline;
 }
