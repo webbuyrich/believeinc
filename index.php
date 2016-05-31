@@ -15,7 +15,7 @@
 get_header(); ?>
 
 	<div class="container">
-		<div class="row">
+		<div class="row margin-top-20">
 			
 			<div id="primary" class="col-lg-9 col-md-9">
 				<main id="main" class="site-main" role="main">

@@ -176,3 +176,8 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require get_template_directory() . '/inc/bootstrap-walker.php'; 
 
+/**
+ * Callback for comments
+ */
+require get_template_directory() . '/inc/comments-callback.php'; 
+

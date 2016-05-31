@@ -12,13 +12,13 @@
 ?>
 
 	</div><!-- #content -->
-	<div class="row" id="black-bar">&nbsp;</div>
+	
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		
 		<div class="container">
 
 			<div class="row">
-				<div class="col-md-12 col-lg-12 text-center">
+				<div class="col-md-12 text-center">
 					<?php if (has_nav_menu('footer-menu', 'believeinc')) { ?>
 					<nav role="navigation">
 						<?php wp_nav_menu(array(

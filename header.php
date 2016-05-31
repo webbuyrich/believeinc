@@ -25,7 +25,7 @@
 	
 	<header id="masthead" class="site-header" role="banner">
 		<nav role="navigation">
-				<div class="navbar navbar-static-top navbar-default">
+				<div class="navbar navbar-static-top navbar-default" id="top-nav">
 					<div class="container">
 						<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
 						<div class="navbar-header">
