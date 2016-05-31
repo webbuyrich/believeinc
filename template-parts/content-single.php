@@ -29,10 +29,8 @@
 			endif; ?>
 		</div>
 		<div class="entry-content panel-body">
-			<?php if ( has_post_thumbnail() ) : ?>
-			    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-			        <?php the_post_thumbnail(); ?>
-			    </a>
+			<?php if ( has_post_thumbnail() ) : ?>			    
+			    <?php the_post_thumbnail( 'full', array('class' => 'img-responsive img-rounded')); ?>			    
 			<?php endif; ?>
 			<?php
 			the_content( sprintf(
